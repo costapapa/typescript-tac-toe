@@ -1,19 +1,16 @@
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 
 interface SquareProps {
-  buttonText: string;
+  value: number;
+  square: Dispatch<SetStateAction<any[]>>;
 }
 
-export default function Square(props: SquareProps) {
-  const [value, setValue] = useState<string | null>(null);
-
-  function handleClick() {
-    setValue(value === "X" ? "O" : "X");
-  }
+export default function Square({ value, square }: SquareProps) {
+  function squareClick() {}
   return (
     <>
-      <button className="square" onClick={handleClick}>
-        {value || props.buttonText}
+      <button className="square" onClick={squareClick}>
+        {value}
       </button>
     </>
   );

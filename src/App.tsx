@@ -1,26 +1,11 @@
 import React, { useState } from "react";
-
 import "./App.css";
-import Square from "./components/Square";
+import { Board } from "./components/Board";
 
 function App() {
   return (
     <div className="App">
-      <div className="board-row">
-        <Square buttonText={"x"} />
-        <Square buttonText={"x"} />
-        <Square buttonText={"x"} />
-      </div>
-      <div className="board-row">
-        <Square buttonText={"x"} />
-        <Square buttonText={"x"} />
-        <Square buttonText={"x"} />
-      </div>
-      <div className="board-row">
-        <Square buttonText={"x"} />
-        <Square buttonText={"x"} />
-        <Square buttonText={"x"} />
-      </div>
+      <Board />
     </div>
   );
 }
