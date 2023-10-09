@@ -1,9 +1,16 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("render the H1", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const headingOne = screen.getByRole("heading", { level: 1 });
+  expect(headingOne).toBeInTheDocument();
+  expect(headingOne.textContent).toBe("Tic-Tac-Toe");
+});
+
+test("Renders X as first go", () => {
+  render(<App />);
+  const xPlayerGo = screen.getByText("Next Player: X");
+  expect(xPlayerGo.textContent).toBe("Next Player: X");
 });

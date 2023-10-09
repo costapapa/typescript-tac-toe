@@ -5,7 +5,7 @@ interface SquareProps {
   square: () => void;
 }
 
-export default function Square({ value, square }: SquareProps) {
+export const Square = ({ value, square }: SquareProps) => {
   return (
     <>
       <button className="square" onClick={square}>
@@ -13,4 +13,4 @@ export default function Square({ value, square }: SquareProps) {
       </button>
     </>
   );
-}
+};
